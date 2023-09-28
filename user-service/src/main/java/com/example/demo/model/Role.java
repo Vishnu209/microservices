@@ -11,7 +11,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Roles {
+public class Role {
 
     @Id
     private String id;

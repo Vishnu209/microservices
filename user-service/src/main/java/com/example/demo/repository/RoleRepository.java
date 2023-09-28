@@ -1,13 +1,15 @@
 package com.example.demo.repository;
 
-import com.example.demo.model.Users;
+import com.example.demo.model.Role;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
 
-@Repository // Optional but recommended for code clarity
-public interface UsersRepository extends MongoRepository<Users, String> {
+import java.util.Optional;
 
-    @Query("{user_email:?0}")
-    Users findByEmail(String email);
+@Repository // Optional but recommended for code clarity
+public interface RoleRepository extends MongoRepository<Role, String> {
+
+    @Query("{role_name:?0}")
+    Optional<Role> findByName(String roleName);
 }

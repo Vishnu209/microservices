@@ -11,7 +11,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.validation.constraints.Email;
+import jakarta.validation.constraints.Email;
 import java.util.Set;
 
 @Data
@@ -19,7 +19,7 @@ import java.util.Set;
 @NoArgsConstructor
 @Builder
 @Document(collection = "users")
-public class Users extends AuditUtils {
+public class User extends AuditUtils {
 
 	@Id
 	private String id;
@@ -41,5 +41,5 @@ public class Users extends AuditUtils {
 	private String password;
 
 	@DBRef
-	private Set<Roles> userRoles;
+	private Set<Role> userRoles;
 }

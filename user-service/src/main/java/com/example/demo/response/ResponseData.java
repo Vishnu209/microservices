@@ -1,6 +1,6 @@
 package com.example.demo.response;
 
-import com.example.demo.DTO.UsersDTO;
+import com.example.demo.model.User;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,8 +11,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@Builder
 public class ResponseData {
 
-    private UsersDTO users;
+    private User user;
+    private JwtAuthenticationResponse jwtResponse;
 }
