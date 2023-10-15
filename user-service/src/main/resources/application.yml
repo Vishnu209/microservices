@@ -2,14 +2,13 @@
 spring:
   data:
     mongodb:
-      uri: mongodb://localhost:27017
-      database: ecommerce
+      uri: mongodb+srv://vishnu209:vishnu209@my-mongo-cluster.hyx1e5n.mongodb.net/ecommerce?retryWrites=true&w=majority
 
 server:
   port : 8081
 
 #jwt credentials
-jwt.secret.key : #####################
+jwt.secret.key : afhakhakgakighasihgighwihgwigjhiopghjirhgjrihjaohjropajnhnkjhijhiopajhgorjhohajopjhohjohjahojhopajhojhoahjaohjrah
 jwt.expiration.in.milliseconds : 172800000
 
       
