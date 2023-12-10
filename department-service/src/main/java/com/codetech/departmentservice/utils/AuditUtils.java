@@ -1,27 +1,28 @@
-package com.example.demo.utils;
+package com.codetech.departmentservice.utils;
 
 import java.time.Instant;
 
-import org.springframework.data.mongodb.core.mapping.Field;
-
+import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class AuditUtils {
 
-	@Field(name = "created_date")
+	@Column(name = "created_date")
 	private Instant createdDate = Instant.now();
 
-	@Field(name = "updated_date")
+	@Column(name = "updated_date")
 	private Instant updatedDate =  Instant.now();
 
-	@Field(name = "created_by")
+	@Column(name = "created_by")
 	private String createdBy;
 
-	@Field(name = "modified_by")
+	@Column(name = "modified_by")
 	private String modifiedBy;
 }

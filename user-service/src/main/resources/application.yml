@@ -1,14 +1,18 @@
 #DB connections
 spring:
+  application:
+    name: user-service
+  config:
+    import: "optional:configserver:http://localhost:8088"
   data:
     mongodb:
-      uri: mongodb+srv://vishnu209:vishnu209@my-mongo-cluster.hyx1e5n.mongodb.net/ecommerce?retryWrites=true&w=majority
+      uri: mongodb://localhost:27017/ecommerce?retryWrites=true&w=majority
 
 server:
   port : 8081
 
 #jwt credentials
-jwt.secret.key : afhakhakgakighasihgighwihgwigjhiopghjirhgjrihjaohjropajnhnkjhijhiopajhgorjhohajopjhohjohjahojhopajhojhoahjaohjrah
+jwt.secret.key : 8BE0C234A8061A3BC29423A6780B9731B52BE37CB0B3E0C968330A46558ED302%)(?#EIW}D{9Ia%*LZjJ3#GmEgx1ZxZ,I;x<AKN8go%t'y*Qy24C$a]z/'5a7S<
 jwt.expiration.in.milliseconds : 172800000
 
       
